@@ -25,7 +25,6 @@ public class Password {
     }
 
     static boolean checkUpperAndLowerCharacter(String password) {
-
         for (int q = 0; q < password.length(); q++) {
             if (Character.isLowerCase(password.charAt(q))) {
                 for (int p = 0; p < password.length(); p++) {
@@ -35,7 +34,7 @@ public class Password {
                 }
             }
         }
-return false;
+        return false;
     }
 
    static boolean checkNumbers(String password) {
@@ -46,13 +45,13 @@ return false;
        }
        return false;
    }
-    static boolean checkSpecialCharacters(String password) {
 
-        String specialCharactersString = "()#$?!%/@";
+    static boolean checkSpecialCharacters(String password) {
+        String specialCharacters = "()#$?!%/@";
         for (int i=0; i < password.length() ; i++)
         {
-            char ch = password.charAt(i);
-            if(specialCharactersString.contains(Character.toString(ch))) {
+            char character = password.charAt(i);
+            if(specialCharacters.contains(Character.toString(character))) {
                 return true;
             }
             else if(i == password.length()-1)
@@ -61,6 +60,5 @@ return false;
         return false;
     }
 
-
-    }
+}
 
