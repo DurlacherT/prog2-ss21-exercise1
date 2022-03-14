@@ -21,21 +21,21 @@ public class PasswordTest {
 
     @Test
     void checkPassword_too_long(){
-        boolean actual = Password.checkPassword("12444444444444444444444423");
+        boolean actual = Password.checkPassword("12444@Gd444444444444444444423");
         boolean expected = false;
         assertEquals(expected, actual);
     }
 
     @Test
     void checkPassword_has_no_capital_charackters(){
-        boolean actual = Password.checkPassword("dddddddddd");
+        boolean actual = Password.checkPassword("dddd1@dddddd");
         boolean expected = false;
         assertEquals(expected, actual);
     }
 
     @Test
     void checkPassword_only_capital_letters(){
-        boolean actual = Password.checkPassword("BBBBBBBBB");
+        boolean actual = Password.checkPassword("BBB1@BBBBBB");
         boolean expected = false;
         assertEquals(expected, actual);
     }
